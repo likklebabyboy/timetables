@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Timetable Upload</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Admin Module</h1>
+            <p>Upload the latest timetable files for each school.</p>
+        </header>
+
+        <form id="uploadForm" enctype="multipart/form-data">
+            <!-- Section for each school -->
+            <section class="upload-section">
+                <h2>Strathmore Law School</h2>
+                <input type="file" name="lawSchoolTimetable" accept=".pdf,.doc,.docx,.xlsx" required>
+            </section>
+
+            <section class="upload-section">
+                <h2>Strathmore Business School</h2>
+                <input type="file" name="businessSchoolTimetable" accept=".pdf,.doc,.docx,.xlsx" required>
+            </section>
+
+            <section class="upload-section">
+                <h2>School of Computing</h2>
+                <input type="file" name="computingSchoolTimetable" accept=".pdf,.doc,.docx,.xlsx" required>
+            </section>
+
+            <section class="upload-section">
+                <h2>School of Engineering</h2>
+                <input type="file" name="engineeringSchoolTimetable" accept=".pdf,.doc,.docx,.xlsx" required>
+            </section>
+
+            <section class="upload-section">
+                <h2>Strathmore Institute</h2>
+                <input type="file" name="instituteTimetable" accept=".pdf,.doc,.docx,.xlsx" required>
+            </section>
+
+            <!-- Submit Button -->
+            <button type="submit" class="upload-btn">Upload Timetables</button>
+        </form>
+    </div>
+
+    <!-- Script for handling form submission -->
+    <script>
+        document.getElementById("uploadForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            alert("Timetables uploaded successfully!");
+            // In production, replace this with actual server upload logic.
+        });
+    </script>
+</body>
+</html>
